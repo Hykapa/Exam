@@ -1,0 +1,17 @@
+	файл .htaccess
+RewriteRule ^(.*)$ public/$1
+	
+	CMD
+php artisan key:generate
+php artisan storage:link
+php artisan make:Controller ИМЯController --model=ИМЯs --requests
+php artisan make:Resource ИМЯResource
+
+	Маршруты Api
+Route::middleware("auth:sanctum")->prefix('/users')->group(function (){
+    Route::post('/',[UserController::class, 'create']);
+    Route::get('/{user}',[UserController::class, 'index']);
+    Route::get('/',[UserController::class, 'show']);
+    Route::patch('/{user}',[UserController::class, 'update']);
+    Route::delete('/{user}',[UserController::class, 'destroy']);
+});

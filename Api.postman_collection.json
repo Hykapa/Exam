@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "c764d351-1a92-42ef-9206-f096ab788166",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25306674"
+	},
+	"item": [
+		{
+			"name": "Пользователь",
+			"item": [
+				{
+					"name": "Регистрация",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Daniildd3df",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Topovodd3d2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "shchaddddn2kd3d@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4129391231232",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/signup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Аутентификация",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "shchadddn2kd3d@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4129391231232",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение всех",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение одного",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Теги",
+			"item": [
+				{
+					"name": "Создание тега",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "eqweqweввdddddddыsdss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/tags/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tags",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение всех тегов",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}/tags",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование тега по ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tыestdddsd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/tags/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление тега по ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "top",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/tags/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tags",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Реклама",
+			"item": [
+				{
+					"name": "Создание рекламного предложения",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"contractor_id\": 1,\r\n    \"title\": \"sa2dddsa\",\r\n    \"text\": \"ddda2оsdsdsa\",\r\n    \"from\": \"04.03.2023\",\r\n    \"until\": \"22.03.2023\",\r\n    \"tags\":[\r\n    8,6]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/ads/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ads",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение всех рекламных предложений",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "top",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/ads",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение одного рекламного предложения",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "top",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/ads/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ads",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование рекламного предложения",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"contractor_id\": 1,\r\n    \"title\": \"sa21sdsa\",\r\n    \"text\": \"da2вsоsdsa\",\r\n    \"from\": \"21.03.2023\",\r\n    \"until\": \"22.03.2023\",\r\n    \"tags\":[\r\n    8,9]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/ads/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ads",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление рекламного предложения",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "11|PIxxGcaeGnjGqEmAKyJBCSdJDYgzvWamhtqwqvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "top",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/ads/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"ads",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
